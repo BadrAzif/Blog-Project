@@ -34,7 +34,7 @@ app.use(rateLimiting({
 
 // Cors Policy
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://blog-project-tk4n.onrender.com"
 }));
 
 // Routes
@@ -44,6 +44,11 @@ app.use("/api/posts", require("./routes/postsRoute"));
 app.use("/api/comments", require("./routes/commentsRoute"));
 app.use("/api/categories", require("./routes/categoriesRoute"));
 app.use("/api/password",require("./routes/passwordRoute"));
+
+// Health Check Endpoint
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
 
 // Error Handler Middleware
 app.use(notFound);

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "blog-pro-mern-stack",
+  "version": "1.0.0",
+  "description": "A blog application built with the MERN stack",
+  "author": "Badr Azif",
+  "license": "MIT",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "node backend/app.js",
+    "dev": "nodemon backend/app.js",
+    "build": "yarn build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.1.1",
+    "hpp": "^0.2.3",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
